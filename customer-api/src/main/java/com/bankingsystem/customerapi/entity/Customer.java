@@ -25,8 +25,11 @@ public class Customer {
     @Size(max = 50)
     private String middleName;
 
-    @Enumerated(EnumType.STRING)
-    private Gender gender;
+    @Size(max = 50)
+    private String gender;
+
+    @Size(max = 50)
+    private String kycStatus;
 
     @NotNull
     private LocalDate dateOfBirth;
@@ -42,9 +45,6 @@ public class Customer {
     @JoinColumn(name = "customer_id")
     private List<Address> addresses;
 
-    @Enumerated(EnumType.STRING)
-    private KycStatus kycStatus;
-
     @Size(max = 50)
     private String nationality;
 
@@ -54,11 +54,7 @@ public class Customer {
     private OffsetDateTime createdAt;
     private OffsetDateTime updatedAt;
 
-    // Enums
-    public enum Gender { Male, Female, Other }
-    public enum KycStatus { PENDING, VERIFIED, REJECTED }
-
-    // Getters and setters
+     // Getters and setters
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
 
@@ -71,8 +67,8 @@ public class Customer {
     public String getMiddleName() { return middleName; }
     public void setMiddleName(String middleName) { this.middleName = middleName; }
 
-    public Gender getGender() { return gender; }
-    public void setGender(Gender gender) { this.gender = gender; }
+    public String getGender() { return gender; }
+    public void setGender(String gender) { this.gender = gender; }
 
     public LocalDate getDateOfBirth() { return dateOfBirth; }
     public void setDateOfBirth(LocalDate dateOfBirth) { this.dateOfBirth = dateOfBirth; }
@@ -86,8 +82,8 @@ public class Customer {
     public List<Address> getAddresses() { return addresses; }
     public void setAddresses(List<Address> addresses) { this.addresses = addresses; }
 
-    public KycStatus getKycStatus() { return kycStatus; }
-    public void setKycStatus(KycStatus kycStatus) { this.kycStatus = kycStatus; }
+    public String getKycStatus() { return kycStatus; }
+    public void setKycStatus(String kycStatus) { this.kycStatus = kycStatus; }
 
     public String getNationality() { return nationality; }
     public void setNationality(String nationality) { this.nationality = nationality; }

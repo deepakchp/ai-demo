@@ -4,6 +4,7 @@ import com.bankingsystem.customerapi.model.Customer;
 import com.bankingsystem.customerapi.model.Address;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.Named;
 import org.mapstruct.factory.Mappers;
 
 import java.util.List;
@@ -18,10 +19,11 @@ public interface CustomerMapper {
 
     com.bankingsystem.customerapi.entity.Address toEntity(Address dto);
 
-    // Entity → DTO
     Customer toDTO(com.bankingsystem.customerapi.entity.Customer customer);
 
     Address toDTO(com.bankingsystem.customerapi.entity.Address address);
 
     List<Customer> toDTOList(List<com.bankingsystem.customerapi.entity.Customer> customers);
+
+
 }

@@ -132,7 +132,6 @@ components:
           example: "Michael"
         gender:
           type: string
-          enum: [Male, Female, Other]
           example: "Male"
         dateOfBirth:
           type: string
@@ -154,7 +153,6 @@ components:
             $ref: "#/components/schemas/Address"
         kycStatus:
           type: string
-          enum: [PENDING, VERIFIED, REJECTED]
           example: "VERIFIED"
         nationality:
           type: string
@@ -188,7 +186,6 @@ components:
       properties:
         type:
           type: string
-          enum: [RESIDENTIAL, MAILING, WORK, OTHER]
           example: "RESIDENTIAL"
         line1:
           type: string
